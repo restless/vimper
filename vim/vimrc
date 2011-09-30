@@ -8,7 +8,7 @@ call pathogen#helptags()
 
 syntax on
 set nu
-colorscheme ir_black
+colorscheme wombat256mod
 set background=dark
 
 "Default mapping
@@ -40,7 +40,30 @@ set listchars=eol:$,tab:>-,trail:.,extends:>,precedes:<
 autocmd filetype html,xml set listchars-=tab:>.
 nmap <F3> :execute 'set list!'<CR>
 
-set pastetoggle=<F2>
+set pastetoggle=<F9>
+
+" indentation for different languages
+if has("autocmd")
+    filetype indent on
+endif
+
+if has("autocmd")
+    autocmd FileType python set ts=4 sw=4 et            " Python
+    autocmd FileType ruby   set ts=2 sw=2               " Ruby
+    autocmd FileType c,cpp  set ts=4 sw=4 cindent       " C & C++
+    autocmd FileType docbk,html,xhtml,xml set ts=2 sw=2 " DocBook, HTML, XHT    ML, and XMLautocmd FileType python set complete+=k/path/to/pydiction iskeyword+=.,(
+    autocmd FileType python set complete+=k/home/merlin/.vim/pydiction.py iskeyword+=.,(
+endif
+
+filetype plugin on
+let g:pydiction_location = '/home/merlin/.vim/complete-dict'
+
+" Tlist (right column)
+let Tlist_Use_Right_Window=1
+let Tlist_Auto_Open=1
+let Tlist_Exit_OnlyWindow=1
+let Tlist_Ctags_Cmd='/home/psocha/bin/ctags/bin/ctags'
+let Tlist_File_Fold_Auto_Close = 1
 
 " Searching
 set hlsearch
@@ -97,9 +120,10 @@ let CommandTMaxHeight=20
 ":nmap <C-R> :w<CR>:!clear<CR><CR>:!python %<CR>
 :nmap <C-I> :execute 'NERDTreeMirror '<CR>
 
-let NERDTreeIgnore=['\~$', '\.pyc$', '\.orig', '\.swp\*']
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.orig', '\.swp\*', '\.vim$']
 let NERDTreeHighlightCursorline=1
 let NERDTreeWinSize=50
+let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\.bak$', '\~$']
 
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>
