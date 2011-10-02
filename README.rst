@@ -17,8 +17,4 @@ vimper's repository.
 
 Want an one liner?
 
-    git clone git://github.com/lukaszb/vimper.git ~/.vimper && cd ~/.vimper && python bootstrap.py
-
-
-.. _macvim: http://code.google.com/p/macvim/
-
+    git clone git://github.com/michalbachowski/vimper.git ~/.vimper && cd ~/.vimper && python bootstrap.py
