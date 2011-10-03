@@ -56,7 +56,7 @@ if has("autocmd")
 endif
 
 filetype plugin on
-let g:pydiction_location = '/home/merlin/.vim/complete-dict'
+let g:pydiction_location = "$HOME/.vim/complete-dict"
 
 " Tlist (right column)
 let Tlist_Use_Right_Window=1
