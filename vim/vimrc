@@ -124,7 +124,7 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '\.orig', '\.swp\*', '\.vim$']
 let NERDTreeHighlightCursorline=1
 let NERDTreeWinSize=50
 let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\.bak$', '\~$']
-
+let NERDTreeShowBookmarks=1
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>
 
