@@ -52,7 +52,6 @@ if has("autocmd")
     autocmd FileType ruby   set ts=2 sw=2               " Ruby
     autocmd FileType c,cpp  set ts=4 sw=4 cindent       " C & C++
     autocmd FileType docbk,html,xhtml,xml set ts=2 sw=2 " DocBook, HTML, XHT    ML, and XMLautocmd FileType python set complete+=k/path/to/pydiction iskeyword+=.,(
-    autocmd FileType python set complete+=k/home/merlin/.vim/pydiction.py iskeyword+=.,(
 endif
 
 filetype plugin on
@@ -90,7 +89,6 @@ set visualbell
 
 "Tabs and spaces
 set smartindent
-set tabstop=4
 
 "Status line"
 set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
