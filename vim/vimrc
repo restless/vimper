@@ -110,8 +110,12 @@ nnoremap <Leader>GR :diffget RE <CR>
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
-" Command-T settings
+" Command-T settings and mapping
 let CommandTMaxHeight=20
+nmap <Leader>f :CommandTFlush <CR>
+
+" cope (Error list)
+nnoremap <Leader>E :cope <CR>
 
 " NERDTree configuration
 :nmap <C-O> :execute 'NERDTreeToggle ' .getcwd() <CR>
@@ -223,8 +227,8 @@ let g:gundo_right = 1
 nnoremap <C-H> :GundoToggle<CR>
 
 " ack.vim
-nmap <silent> <unique> <Leader>aa :Ack 
-nmap <silent> <unique> <Leader>ag :Ack -g 
+nmap <silent> <Leader>aa :Ack
+nmap <silent> <Leader>ag :Ack -g
 
 " Let JSLint use node
 let $JS_CMD='node'
