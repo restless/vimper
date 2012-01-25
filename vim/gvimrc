@@ -5,6 +5,7 @@ endif
 set background=light
 colorscheme solarized
 
+set guifont=Monaco:h11
 set guioptions-=m " Removes menubar
 set guioptions-=T " Removes Toolbar
 set guioptions+=c " Uses console dialogs (instead of popups)
